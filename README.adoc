@@ -9,7 +9,6 @@ The XCL platform combines low latencies (sub millisecond), IoT transaction rates
 
 The platform makes use of https://github.com/cangqun343/BenchIt/blob/master/README.adoc[BenchIt] for encryption and https://github.com/cangqun343/BenchIt[BenchIt] add description -what is benchit for?
 
-High performance block chain platform
 
 == Message Types
 
