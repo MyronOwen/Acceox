@@ -3,19 +3,19 @@ package cash.xcl.api.dto;
 import net.cangqun343.chronicle.bytes.Bytes;
 import net.cangqun343.chronicle.bytes.BytesIn;
 
-public class ClusterTransferInformationEvent extends SignedMessage {
+public class DepositValueInformationEvent extends SignedMessage {
 
     // TODO
-    //private ClusterTransferValueCommand tvc;
+    //private DepositValueCommand tvc;
     private Transfer transfer;
 
-    public ClusterTransferInformationEvent(long sourceAddress, long eventTime, Transfer transfer) {
+    public DepositValueInformationEvent(long sourceAddress, long eventTime, Transfer transfer) {
         super(sourceAddress, eventTime);
         this.transfer = transfer;
     }
 
 
-    public ClusterTransferInformationEvent() {
+    public DepositValueInformationEvent() {
         super();
     }
 
@@ -31,7 +31,7 @@ public class ClusterTransferInformationEvent extends SignedMessage {
 
     @Override
     protected int messageType() {
-        return MethodIds.TRANSFER_VALUE_INFORMATION_EVENT;
+        return MethodIds.DEPOSIT_INFORMATION_EVENT;
     }
 
 
@@ -39,7 +39,7 @@ public class ClusterTransferInformationEvent extends SignedMessage {
         return transfer;
     }
 
-    public ClusterTransferInformationEvent transfer(Transfer transfer) {
+    public DepositValueInformationEvent transfer(Transfer transfer) {
         this.transfer = transfer;
         return this;
     }
