@@ -1,10 +1,6 @@
 = Acceox
 Peter Lawrey, Sabrina Rai
-
-
-<a href="https://maven-badges.herokuapp.com/maven-central/net.cangqun343/acceox">
-<img src="https://maven-badges.herokuapp.com/maven-central/net.cangqun343/acceox/badge.svg"/>
-</a>
+ 
 
 
 == Acceox (XCL)
