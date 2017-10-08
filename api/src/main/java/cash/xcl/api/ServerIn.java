@@ -25,9 +25,8 @@ public interface ServerIn extends Closeable {
     void withdrawValueCommand(WithdrawValueCommand withdrawValueCommand);
 
     void newLimitOrderCommand(NewLimitOrderCommand newLimitOrderCommand);
-
     void newMarketOrderCommand(NewMarketOrderCommand newMarketOrderCommand);
-
     void cancelOrderCommand(CancelOrderCommand cancelOrderCommand);
+
 
 }

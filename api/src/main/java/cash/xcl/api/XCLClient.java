@@ -166,44 +166,30 @@ public class XCLClient implements AllMessages, Closeable {
     }
 
     @Override
-    public void clustersStatusQuery(ClustersStatusQuery clustersStatusQuery) {
-        write(clustersStatusQuery);
-    }
+    public void clustersStatusQuery(ClustersStatusQuery clustersStatusQuery) {write(clustersStatusQuery); }
 
     @Override
-    public void currentBalanceEvent(CurrentBalanceEvent currentBalanceEvent) {
-        write(currentBalanceEvent);
-    }
+    public void currentBalanceEvent(CurrentBalanceEvent currentBalanceEvent) {write(currentBalanceEvent); }
 
     @Override
-    public void currentBalanceQuery(CurrentBalanceQuery currentBalanceQuery) {
-        write(currentBalanceQuery);
-    }
+    public void currentBalanceQuery(CurrentBalanceQuery currentBalanceQuery) {write(currentBalanceQuery); }
 
     @Override
-    public void exchangeRateQuery(ExchangeRateQuery exchangeRateQuery) {
-        write(exchangeRateQuery);
-    }
+    public void exchangeRateQuery(ExchangeRateQuery exchangeRateQuery) {write(exchangeRateQuery); }
 
     @Override
-    public void executionReportEvent(ExecutionReportEvent executionReportEvent) {
-        write(executionReportEvent);
-    }
+    public void executionReportEvent(ExecutionReportEvent executionReportEvent) {write(executionReportEvent); }
 
     @Override
-    public void newLimitOrderCommand(NewLimitOrderCommand newLimitOrderCommand) {
-        write(newLimitOrderCommand);
-    }
+    public void newLimitOrderCommand(NewLimitOrderCommand newLimitOrderCommand) {write(newLimitOrderCommand); }
 
     @Override
-    public void newMarketOrderCommand(NewMarketOrderCommand newMarketOrderCommand) {
-        write(newMarketOrderCommand);
-    }
+    public void newMarketOrderCommand(NewMarketOrderCommand newMarketOrderCommand) {write(newMarketOrderCommand); }
 
     @Override
-    public void cancelOrderCommand(CancelOrderCommand cancelOrderCommand) {
-        write(cancelOrderCommand);
-    }
+    public void cancelOrderCommand(CancelOrderCommand cancelOrderCommand)  {write(cancelOrderCommand); }
+
+
 
     private void write(SignedMessage message) {
         try {
@@ -217,11 +203,6 @@ public class XCLClient implements AllMessages, Closeable {
         } catch (IOException e) {
             throw new IORuntimeException(e);
         }
-    }
-
-    @Override
-    public void close() {
-        tcpClient.close();
     }
 
     class ClientListener implements TCPClientListener {
@@ -238,5 +219,10 @@ public class XCLClient implements AllMessages, Closeable {
                 throw iore;
             }
         }
+    }
+
+    @Override
+    public void close() {
+        tcpClient.close();
     }
 }
