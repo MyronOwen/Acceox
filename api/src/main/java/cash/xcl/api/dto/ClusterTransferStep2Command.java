@@ -12,6 +12,7 @@ public class ClusterTransferStep2Command extends SignedMessage {
         this.clusterTransferStep1Command = clusterTransferStep1Command;
     }
 
+
     public ClusterTransferStep2Command() {
         super();
     }
