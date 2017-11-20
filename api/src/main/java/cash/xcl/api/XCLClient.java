@@ -205,11 +205,6 @@ public class XCLClient implements AllMessages, Closeable {
         write(cancelOrderCommand);
     }
 
-    @Override
-    public void serviceNodesEvent(ServiceNodesEvent serviceNodesEvent) {
-        write(serviceNodesEvent);
-    }
-
     private void write(SignedMessage message) {
         try {
             if (!message.hasSignature()) {

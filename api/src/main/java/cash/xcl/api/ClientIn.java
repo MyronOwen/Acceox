@@ -24,8 +24,6 @@ public interface ClientIn {
 
     void withdrawValueEvent(WithdrawValueEvent withdrawValueEvent);
 
-    void executionReportEvent(ExecutionReportEvent executionReportEvent);
-
     // Responses
     void subscriptionSuccessResponse(SubscriptionSuccessResponse subscriptionSuccessResponse);
 
@@ -36,6 +34,5 @@ public interface ClientIn {
     void currentBalanceResponse(CurrentBalanceResponse currentBalanceResponse);
 
     void exchangeRateResponse(ExchangeRateResponse exchangeRateResponse);
-
 
 }

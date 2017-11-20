@@ -22,12 +22,4 @@ public interface ClientOut extends Closeable {
 
     void cancelOrderCommand(CancelOrderCommand cancelOrderCommand);
 
-    void clusterStatusQuery(ClusterStatusQuery clusterStatusQuery);
-
-    void clustersStatusQuery(ClustersStatusQuery clustersStatusQuery);
-
-    void currentBalanceQuery(CurrentBalanceQuery currentBalanceQuery);
-
-    void exchangeRateQuery(ExchangeRateQuery exchangeRateQuery);
-
 }
