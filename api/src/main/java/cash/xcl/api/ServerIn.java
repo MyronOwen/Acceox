@@ -6,7 +6,7 @@ import net.cangqun343.chronicle.core.io.Closeable;
 /**
  * This should be only Commands (no Query/Response) and weekly Events or Events from other clusters.
  */
-public interface ServerIn extends WeeklyEvents, Closeable {
+public interface ServerIn extends Closeable {
     // from client
     void createNewAddressCommand(CreateNewAddressCommand createNewAddressCommand);
 
