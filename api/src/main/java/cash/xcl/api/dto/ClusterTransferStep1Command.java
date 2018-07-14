@@ -1,16 +1,16 @@
 package cash.xcl.api.dto;
 
-import net.cangqun343.chronicle.bytes.Bytes;
 import net.cangqun343.chronicle.bytes.BytesIn;
+import net.cangqun343.chronicle.bytes.BytesOut;
 
 public class ClusterTransferStep1Command extends TransferValueCommand {
 
     @Override
-    protected void readMarshallable2(BytesIn bytes) {
+    protected void readMarshallable2(BytesIn<?> bytes) {
     }
 
     @Override
-    protected void writeMarshallable2(Bytes bytes) {
+    protected void writeMarshallable2(BytesOut<?> bytes) {
     }
 
     @Override
