@@ -1,5 +1,7 @@
 package cash.xcl.api;
 
-public interface ServerComponent extends AllMessages {
+import net.cangqun343.chronicle.core.io.Closeable;
+
+public interface ServerComponent extends Closeable {
     void allMessagesLookup(AllMessagesLookup lookup);
 }
