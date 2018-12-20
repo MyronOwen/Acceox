@@ -1,15 +1,6 @@
 package cash.xcl.api;
 
-import cash.xcl.api.dto.BlockSubscriptionQuery;
-import cash.xcl.api.dto.ClusterTransferStep1Command;
-import cash.xcl.api.dto.ClusterTransferStep2Command;
-import cash.xcl.api.dto.ClusterTransferStep3Command;
-import cash.xcl.api.dto.CreateNewAddressCommand;
-import cash.xcl.api.dto.DepositValueCommand;
-import cash.xcl.api.dto.TransferValueCommand;
-import cash.xcl.api.dto.WithdrawValueCommand;
-import cash.xcl.api.exch.CancelOrderCommand;
-import cash.xcl.api.exch.NewLimitOrderCommand;
+import cash.xcl.api.dto.*;
 import net.cangqun343.chronicle.core.io.Closeable;
 
 /**
@@ -37,6 +28,8 @@ public interface ServerIn extends WeeklyEvents, Closeable {
     void withdrawValueCommand(WithdrawValueCommand withdrawValueCommand);
 
     void newLimitOrderCommand(NewLimitOrderCommand newLimitOrderCommand);
+
+    void newMarketOrderCommand(NewMarketOrderCommand newMarketOrderCommand);
 
     void cancelOrderCommand(CancelOrderCommand cancelOrderCommand);
 
