@@ -1,7 +1,6 @@
 package cash.xcl.api;
 
 import cash.xcl.api.dto.*;
-import cash.xcl.api.exch.ExecutionReportEvent;
 import net.cangqun343.chronicle.core.io.Closeable;
 
 /**
