@@ -1,13 +1,6 @@
 package cash.xcl.api;
 
-import cash.xcl.api.dto.ClusterStatusQuery;
-import cash.xcl.api.dto.ClusterTransferStep1Command;
-import cash.xcl.api.dto.ClustersStatusQuery;
-import cash.xcl.api.dto.CreateNewAddressCommand;
-import cash.xcl.api.dto.CurrentBalanceQuery;
-import cash.xcl.api.dto.ExchangeRateQuery;
-import cash.xcl.api.dto.SubscriptionQuery;
-import cash.xcl.api.dto.TransferValueCommand;
+import cash.xcl.api.dto.*;
 import cash.xcl.api.exch.CancelOrderCommand;
 import cash.xcl.api.exch.NewLimitOrderCommand;
 import net.cangqun343.chronicle.core.io.Closeable;
@@ -25,7 +18,7 @@ public interface ClientOut extends Closeable {
     // client only.
     void subscriptionQuery(SubscriptionQuery subscriptionQuery);
 
-    void newLimitOrderCommand(NewLimitOrderCommand newLimitOrderCommand);
+    void newOrderCommand(NewOrderCommand newOrderCommand);
 
     void cancelOrderCommand(CancelOrderCommand cancelOrderCommand);
 
