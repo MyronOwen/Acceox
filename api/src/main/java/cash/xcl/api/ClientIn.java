@@ -1,19 +1,7 @@
 package cash.xcl.api;
 
-import cash.xcl.api.dto.ClusterStatusResponse;
-import cash.xcl.api.dto.ClusterTransferStep3Event;
-import cash.xcl.api.dto.ClustersStatusResponse;
-import cash.xcl.api.dto.CommandFailedEvent;
-import cash.xcl.api.dto.CreateNewAddressEvent;
-import cash.xcl.api.dto.CurrentBalanceResponse;
-import cash.xcl.api.dto.ExchangeRateResponse;
-import cash.xcl.api.dto.QueryFailedResponse;
-import cash.xcl.api.dto.SubscriptionSuccessResponse;
-import cash.xcl.api.dto.TransferValueEvent;
-import cash.xcl.api.exch.DepositValueEvent;
-import cash.xcl.api.exch.ExecutionReportEvent;
+import cash.xcl.api.dto.*;
 import cash.xcl.api.exch.OrderClosedEvent;
-import cash.xcl.api.exch.WithdrawValueEvent;
 
 /**
  * Any responses from the Server to the client needed, in addition to ServerOut.
@@ -37,7 +25,7 @@ public interface ClientIn {
 
     void withdrawValueEvent(WithdrawValueEvent withdrawValueEvent);
 
-    void executionReportEvent(ExecutionReportEvent executionReportEvent);
+    void executionReportEvent(cash.xcl.api.dto.ExecutionReportEvent executionReportEvent);
 
     void orderClosedEvent(OrderClosedEvent orderClosedEvent);
 
