@@ -3,7 +3,7 @@ package cash.xcl.api.dto;
 import net.cangqun343.chronicle.bytes.BytesIn;
 import net.cangqun343.chronicle.bytes.BytesOut;
 
-public class BlockSubscriptionQuery extends SignedBinaryMessage {
+public class BlockSubscriptionQuery extends SignedMessage {
     private int weekNumber;
     private long blockNumber;
 
@@ -30,7 +30,7 @@ public class BlockSubscriptionQuery extends SignedBinaryMessage {
     }
 
     @Override
-    public int intMessageType() {
+    public int messageType() {
         return MessageTypes.BLOCK_SUBSCRIPTION_QUERY;
     }
 
