@@ -1,19 +1,24 @@
 package cash.xcl.api;
 
+import cash.xcl.api.dto.ApplicationMessageEvent;
 import cash.xcl.api.dto.ClusterTransferStep2Command;
 import cash.xcl.api.dto.ClusterTransferStep3Command;
 import cash.xcl.api.dto.ClusterTransferStep3Event;
+import cash.xcl.api.dto.CommandFailedEvent;
 import cash.xcl.api.dto.CreateNewAddressEvent;
 import cash.xcl.api.exch.ExecutionReportEvent;
-import cash.xcl.api.exch.OrderClosedEvent;
 import net.cangqun343.chronicle.core.io.Closeable;
 
 /**
  * This should be only Events, and Commands which would be directed to other clusters.
  */
-public interface ServerOut extends ErrorMessageLogger, Closeable {
+public interface ServerOut extends Closeable {
 
     void createNewAddressEvent(CreateNewAddressEvent createNewAddressEvent);
+
+    void applicationMessageEvent(ApplicationMessageEvent applicationMessageEvent);
+
+    void commandFailedEvent(CommandFailedEvent commandFailedEvent);
 
     void clusterTransferStep2Command(ClusterTransferStep2Command clusterTransferStep2Command);
 
@@ -22,7 +27,5 @@ public interface ServerOut extends ErrorMessageLogger, Closeable {
     void clusterTransferStep3Event(ClusterTransferStep3Event clusterTransferStep3Event);
 
     void executionReportEvent(ExecutionReportEvent executionReportEvent);
-
-    void orderClosedEvent(OrderClosedEvent orderClosedEvent);
 
 }

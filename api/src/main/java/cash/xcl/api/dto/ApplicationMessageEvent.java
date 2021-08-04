@@ -3,7 +3,7 @@ package cash.xcl.api.dto;
 import net.cangqun343.chronicle.bytes.BytesIn;
 import net.cangqun343.chronicle.bytes.BytesOut;
 
-import static cash.xcl.util.Validators.notNullOrEmpty;
+import static cash.xcl.api.dto.Validators.notNullOrEmpty;
 
 /**
  * A generic application message has been reported.  These should be used as little as possible as they cannot be easily processed downstream.
@@ -15,13 +15,13 @@ public class ApplicationMessageEvent extends SignedErrorMessage {
 
     private String level;
 
-    public ApplicationMessageEvent(long sourceAddress, long eventTime, SignedBinaryMessage orig, String reason, String level) {
+    public ApplicationMessageEvent(long sourceAddress, long eventTime, SignedMessage orig, String reason, String level) {
         super(sourceAddress, eventTime, orig, reason);
         this.level = level;
     }
 
-    public ApplicationMessageEvent(long sourceAddress, long eventTime, long origSourceAddress, long origEventTime, String origProtocol, String origMessageType, String reason, String level) {
-        super(sourceAddress, eventTime, origSourceAddress, origEventTime, origProtocol, origMessageType, reason);
+    public ApplicationMessageEvent(long sourceAddress, long eventTime, long origSourceAddress, long origEventTime, int origMessageType, String reason, String level) {
+        super(sourceAddress, eventTime, origSourceAddress, origEventTime, origMessageType, reason);
         level(level);
     }
 
@@ -46,7 +46,7 @@ public class ApplicationMessageEvent extends SignedErrorMessage {
     }
 
     @Override
-    public int intMessageType() {
+    public int messageType() {
         return MessageTypes.APPLICATION_MESSAGE_EVENT;
     }
 
